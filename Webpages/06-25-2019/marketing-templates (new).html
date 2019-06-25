@@ -1,0 +1,108 @@
+<style>
+    img {
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    p {
+        font-size: 3rem;
+    }
+
+    .allColumns {
+        margin-top: 30px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .leftHalf {
+        max-width: 66%;
+        float: left;
+    }
+
+    .leftColumn {
+        padding-right: 35px;
+        max-width: 50%;
+        float: left;
+    }
+
+    .middleColumn {
+        max-width: 50%;
+        float: right;
+    }
+
+    .rightColumn {
+        max-width: 33%;
+        float: right;
+    }
+
+    .notTopRow {
+        margin-top: 100px;
+    }
+
+    .topRow {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .leftHalf {
+            max-width: 100%;
+            float: none;
+        }
+        .rightColumn {
+            margin-top: 150px;
+            max-width: 100%;
+            bottom: 0;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        .rightColumn {
+            margin-top: 180px;
+            max-width: 100%;
+            bottom: 0;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .leftColumn {
+            max-width: 100%;
+            float: none;
+            padding: none;
+        }
+        .middleColumn {
+            max-width: 100%;
+            float: none;
+            margin-top: 70px;
+            margin-left: -20px;
+        }
+        .rightColumn {
+            margin-top: 70px;
+            float: none;
+        }
+    }
+</style>
+
+<div class="allColumns">
+    <div class="leftHalf">
+        <div class="leftColumn">
+            <p class="topRow">General Books Template</p>
+            <img src="/Images/Marketing/GenBooks.png" />
+            <p class="notTopRow">Farmer's Market</p>
+            <img src="/Images/Marketing/Farmers.png" />
+        </div>
+        <div class="middleColumn">
+            <p class="topRow">Sunshine Market</p>
+            <img src="/Images/Marketing/Sunshine.png" />
+            <p class="notTopRow">Computer Store</p>
+            <img src="/Images/Marketing/Computer.png" />
+        </div>
+    </div>
+    <div class="rightColumn">
+        <p class="topRow">Audrey's</p>
+        <img src="/Images/Marketing/Audreys.png" />
+        <p class="notTopRow">Clearance</p>
+        <img src="/Images/Marketing/Clearance.png" />
+        <p class="notTopRow">Other</p>
+        <img src="/Images/Marketing/Other.png" />
+    </div>
+</div>
+
