@@ -1,0 +1,386 @@
+<style>
+        a {
+        color: #006A96
+        }
+        .collapsible {
+        background-color: white;
+        color: #444;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        }
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        /* Style the collapsible content. Note: hidden by default */
+        .content {
+        display: none;
+        padding: 0 18px;
+        overflow: hidden;
+        background-color: white;
+        }
+        .hide {
+        display: none;
+        }
+        .textbookULs {
+        background-color: rgba(255,205,0,0.25);
+        width:100%;
+        }
+        @media (min-width:769px){
+        .textbookULs {
+        width:50%;
+        }
+        }
+        @media (min-width: 992px) {
+        .textbookULs {
+        width: 50%;
+        }
+        }
+        @media (min-width:1200px){
+        .textbookULs {
+        width:50%;
+        height:initial;
+        }
+        }
+        .noshow {
+        list-style-type: none;
+        }
+    </style>
+    <br />
+    <div class="header">
+    <h2>Resources<br />
+    </h2>
+    </div>
+    <p>We are happy to serve and provide resources for UC San Diego students, faculty, staff, alumni &amp; fans everywhere. Check below for important information!</p>
+    <br />
+    <div class="textbookULs" style="padding:10px;float:left;margin: auto; border: 10px solid white;">
+    <div>
+    <p style="background-color:#006a96;"><strong><span style="padding: 10px; font-size: 24px; color: white;">Recharges</span></strong></p>
+    <p style="padding-bottom:10px;"><span class="subhead2">
+    Enter your index number and select a period to obtain your recharge summary.</span></p>
+    <form action="https://ucsdbkst.ucsd.edu/wrtx/RechargeStatement" method="post" name="rechargeform" onsubmit="return rechargevalidate();">
+        <input value="html" name="output" type="hidden" />
+        <p>Index Number:<img alt="" src="../images/spacer.gif" width="15" height="1" /> <input maxlength="7" size="15" name="index" type="text" /> </p>
+        <p>Period:<img alt="" src="../images/spacer.gif" width="55" height="1" /> <select id="period" name="period"></select> </p>
+        <p><input value="Get Summary" type="submit" /></p>
+    </form>
+    <script type="text/javascript">
+      ///////////////////////////////////////////////////////////////////////////////////////////////////
+      // Given a month number (0 to 11), return the month name in text
+      ///////////////////////////////////////////////////////////////////////////////////////////////////
+      function GetMonthName(monthnbr) {
+        var months = new Array(12);
+        months[0] = "January";
+        months[1] = "February";
+        months[2] = "March";
+        months[3] = "April";
+        months[4] = "May";
+        months[5] = "June";
+        months[6] = "July";
+        months[7] = "August";
+        months[8] = "September";
+        months[9] = "October";
+        months[10] = "November";
+        months[11] = "December";
+        if (monthnbr < 0 || monthnbr > 11)
+          return "Month must be 0 to 11";
+        else
+          return months[monthnbr];
+      }
+    
+      ///////////////////////////////////////////////////////////////////////////////////////////////////
+      // Given a beginning year and month, print a list of options of months from the beginning to the
+      // month after the current year and month for an HTML <select> tag
+      ///////////////////////////////////////////////////////////////////////////////////////////////////
+    function SelectMonth() {
+        var beginyear = 2008;
+        var beginmonth = 4;
+        var server_date = null;
+        var now;
+        var mwm = -1;
+    
+        if (server_date != null) {
+          now = server_date;
+        } else {
+          now = new Date();
+        }
+        var currentyear = now.getFullYear();
+        var currentmonth = now.getMonth(); //from 0 to 11
+        var currentday = now.getDate();
+        var y, m, beginm, endm, realm;
+        var options = document.getElementById("period");
+        var selected;
+        var defaulty = currentyear;
+        var defaultm = currentmonth;
+        //alert(currentmonth);
+        //one month beyond the current year/month
+    
+        if (currentmonth == 11) {
+          if (currentday == 31) {
+            currentmonth = 0;
+            currentyear++;
+          } else {
+            currentmonth = 11;
+          }
+        } else {
+          currentmonth++;
+        }
+    
+        beginmonth -= 1;
+        for (y = currentyear; y >= beginyear; y--) { //from current or end year to beginning year
+          if (beginyear == currentyear) { //beginning and current years are the same
+            begm = beginmonth;
+            endm = currentmonth;
+          } else { //more than one years involved
+            begm = 0;
+            endm = 11;
+            if (y == beginyear) {
+              begm = beginmonth;
+              endm = 11;
+            } else if (y == currentyear) {
+              begm = 0;
+              endm = currentmonth;
+            }
+          }
+          for (m = endm; m >= begm; m--) { //from end month to beginning month 
+            realm = m + 1;
+            if (realm < 10)
+              realm = "0" + realm;
+            if (m == defaultm && y == defaulty)
+              selected = " selected ";
+            else
+              selected = "";
+    
+            mwm++;
+            document.rechargeform.period.options[mwm] = new Option(GetMonthName(m) + " " + y, y.toString() + realm, 0, selected);
+    
+    //        options.innerHTML += "<option value=\"" + y + realm + "\"" + selected + ">" +
+    //         GetMonthName(m) + " " + y + "</option> \n";
+    
+          }
+        } //for
+    
+      } //SelectMonth
+      function rechargevalidate()
+    {
+        var form = document.rechargeform;
+        if (form.index.value == "" || form.index.value == null) {
+          alert("Please enter an Index Number");
+          form.index.focus();
+          return false;
+        }
+    }
+    
+    SelectMonth();
+    </script>
+    </div>
+    </div>
+    <div class="textbookULs" style="padding:10px;float:left;margin: auto; border: 10px solid white;">
+    <div>
+    <p style="background-color:#006a96;"><strong><span style="padding: 10px; font-size: 24px; color: white;">Faculty</span></strong></p>
+    <p>Here at UC San Diego, we are committed to supporting our UCSD faculty who build our academia with their outstanding work. To order books for your courses, take a look at the <a href="https://ucsandiegobookstore.com/t-coursematerials.aspx" target="blank">Textbooks</a> page. Please <a href="https://ucsandiegobookstore.com/t-comments.aspx" target="_blank">let us know</a> if there is anything at all we can do for you.</p>
+    <p><strong>Important links:</strong></p>
+    </div>
+    <button class="read-more-show3 hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read More</button>
+    <div class="read-more-content3">
+    <p><strong>UCSD Bookstore Resources</strong><br />
+    <a href="https://ucsandiegobookstore.com/t-coursematerials.aspx" target="_blank">Order Books for Courses</a><br />
+    <a href="https://ucsandiegobookstore.com/c-277-technology.aspx" target="_blank">Computer Store</a><br />
+    <a href="https://ucsandiegobookstore.com/t-pubreps.aspx" target="_blank">Desk Copies and Publisher Representatives</a><br />
+    <a href="https://ucsandiegobookstore.com/c-976-faculty-authors.aspx" target="_blank">Faculty Authors</a><br />
+    <a href="https://ucsandiegobookstore.com/t-gradcentral.aspx" target="_blank">Graduation</a><br />
+    <a href="https://ucsandiegobookstore.com/t-news.aspx" target="_blank">Sales and Events</a><br />
+    <a href="http://blink.ucsd.edu/instructors/resources/instructional.html#Textbook-services" target="_blank">Instructional Material for Faculty</a><br />
+    </p>
+    <p><strong>UCSD Faculty Resources</strong><br />
+    <a href="https://blink.ucsd.edu/faculty/general/index.html" target="_blank">Faculty Resources</a><br />
+    <a href="https://blink.ucsd.edu/instructors/index.html" target="_blank">Instructional Resources </a><br />
+    <a href="https://library.ucsd.edu/borrow-and-request/course-reserves/index.html" target="_blank">Course Reserves</a><br />
+    <a href="http://blink.ucsd.edu/sponsor/imprints/index.html" target="_blank">Printing and Duplicating</a><br />
+    </p>
+    <button class="read-more-hide3 hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read Less</button>
+    </div>
+    </div>
+    <div class="textbookULs" style="padding:10px;float:left;margin: auto; border: 10px solid white;">
+    <div>
+    <p style="background-color:#006a96;"><strong><span style="padding: 10px; font-size: 24px; color: white;">Notary Services</span></strong></p>
+    <p>
+    The Bookstore, along with other units on campus, provide notary services to the campus community.</p>
+    <p>
+    All work is performed <strong>weekdays by appointment only; you must call or email in advance</strong>.<strong>To use the Bookstore's notary services, contact:</strong></p>
+    <p>Patrice Lowe&nbsp; </p>
+    <p>(858) 822-0238 |&nbsp;&nbsp;<a href="mailto:plowe@ucsd.edu?subject=Notary%20Services">plowe@ucsd.edu</a></p>
+    </div>
+    <button class="read-more-show hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read More</button>
+    <div class="read-more-content">
+    <p>Services are provided by bonded, professional notaries public, who are certified by the California Secretary of State. The fee for notarial services is a maximum of $15 per signature. Copies made on behalf of the signer cost 30 cents per page.<br />
+    <br />
+    <strong>No fees shall be collected:</strong><br />
+    -&nbsp; For university-related business<br />
+    -&nbsp; For verifying any nomination document or circulator’s affidavit<br />
+    -&nbsp; From a U.S. military veteran for notarization of an application or claim for:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •&nbsp; Pension<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •&nbsp; Allotment<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •&nbsp;  Allowance compensation<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •&nbsp; Insurance, or<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •&nbsp; Any other veteran's benefit.<br />
+    <br />
+    Notarial services are offered by appointment at locations throughout the UC San Diego campus and medical centers. Consult the Blink notary service information page for additional information<strong><span style="text-decoration: underline;"><a href="http://rmp.ucsd.edu/policy-records/notaries.html#Notary-Services" target="_blank"> here</a></span></strong>.</p>
+    <button class="read-more-hide hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read Less</button>
+    </div>
+    </div>
+    <div class="textbookULs" style="padding:10px;float:left;margin: auto; border: 10px solid white;">
+    <div>
+    <p style="background-color:#006a96;"><strong><span style="padding: 10px; font-size: 24px; color: white;">Parents</span></strong></p>
+    <p>Thank you for choosing to visit the UCSD Bookstore. Planning to visit your son or daughter? Attending a UCSD Event? Need information about admissions? UCSD offers many resources for parents of current or prospective UCSD students. Our goal is to provide lots of links to lots of information around and about the UCSD campus. Please <a href="t-comments.aspx" target="_blank">let us know</a> if we can be of further assistance.</p>
+    <br />
+    <p><strong>Important links:</strong></p>
+    </div>
+    <button class="read-more-show hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read More</button>
+    <div class="read-more-content">
+    <p><span style="font-size: 16px;"><strong><span style="font-size: 16px;">UCSD Bookstore Resources</span></strong><br />
+    <a href="c-301-computers.aspx" target="_blank">Computers for UCSD</a><br />
+    <a href="https://ucsandiegobookstore.com/t-hours-location.aspx" target="_blank">Map &amp; Directions to Campus</a><br />
+    <a href="c-272-family.aspx" target="_blank">Gifts</a><br />
+    <a href="t-gradcentral.aspx" target="_blank">
+    <g class="gr_ gr_25 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del" id="25" data-gr-id="25">Grad</g>
+    Central</a><br />
+    <a href="https://ucsandiegobookstore.com/c-215-textbooks.aspx" target="_blank"><br />
+    </a></span><a href="https://ucsandiegobookstore.com/c-215-textbooks.aspx" target="_blank">
+    <span style="font-size: 14px;"><strong><span style="font-size: 16px;"></span></strong></span></a><span style="font-size: 14px;"><strong><span style="font-size: 16px;">Parent Resources</span></strong></span><span style="height: 25px; margin: 0px; padding: 10px 0px 10px 5px;"><br />
+    <a href="http://admissions.ucsd.edu/" target="_blank">Admissions</a><br />
+    <a href="https://acms.ucsd.edu/students/index.html" target="_blank">Computer Requirements</a><br />
+    <a href="http://parents.ucsd.edu/" target="_blank">UCSD Parents</a><br />
+    <a href="http://parents.ucsd.edu/news-pubs/index.html" target="_blank">Publications &amp; Enewsletter for Parents</a><br />
+    <a href="http://warren.ucsd.edu/?_ga=2.266063375.1809831552.1509397558-89591334.1504118658" target="_blank">Earl Warren College</a><br />
+    <a href="http://roosevelt.ucsd.edu/?_ga=2.8523701.1809831552.1509397558-89591334.1504118658" target="_blank">Eleanor Roosevelt College</a><br />
+    <a href="https://muir.ucsd.edu/" target="_blank">John Muir College</a><br />
+    <a href="https://revelle.ucsd.edu/" target="_blank">Roger Revelle College</a><br />
+    <a href="http://marshall.ucsd.edu/?_ga=2.235464577.1809831552.1509397558-89591334.1504118658" target="_blank">Thurgood Marshall College</a><br />
+    <a href="http://sixth.ucsd.edu/about/parents/index.html" target="_blank">Sixth College</a></span></p>
+    <button class="read-more-hide hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read Less</button>
+    </div>
+    </div>
+    <br />
+    <br />
+    <div class="textbookULs" style="padding:10px;float:left;margin: auto; border: 10px solid white;">
+    <div>
+    <p style="background-color:#006a96;"><strong><span style="padding: 10px; font-size: 24px; color: white;">Alumni</span></strong></p>
+    <div style="height: 25px; margin: 0px; padding: 10px 0px 10px 5px; font-size: 14px;"><a href="http://alumni.ucsd.edu" target="_blank"><strong>Alumni Association</strong></a><strong>&nbsp; &nbsp; &nbsp;<a href="http://alumni.ucsd.edu/s/1170/interior-3col.aspx?sid=1170&amp;gid=1&amp;sitebuilder=1&amp;pgid=13&amp;cid=664" target="_blank">Alumni Events Calendar<br />
+    </a></strong></div>
+    <p style="height: 25px; margin: 0px; padding: 10px 0px 10px 5px; font-size: 14px;"><strong>&nbsp;</strong><a href="http://alumni.ucsd.edu/s/1170/interior-3col.aspx?sid=1170&amp;gid=1&amp;sitebuilder=1&amp;pgid=13&amp;cid=664" target="_blank"></a></p>
+    <p>UC San Diego Alumni works to provide alumni with continued access to the resources of the University, communicate UC San Diego news and events, and facilitate a lifelong, mutually beneficial network between alumni and students.</p>
+    <p><strong>Important links:</strong></p>
+    </div>
+    <button class="read-more-show hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read More</button>
+    <div class="read-more-content">
+    <ul>
+        <li><a target="_blank" href="http://alumni.ucsd.edu/s/1170/index.aspx?sid=1170&amp;gid=1&amp;pgid=2648">Alumni Perks &amp; Privileges</a></li>
+        <li><a target="_blank" href="http://alumni.ucsd.edu/s/1170/PageB.aspx?sid=1170&amp;gid=1&amp;pgid=312">Update your Personal Information</a></li>
+        <li><a target="blank" href="http://alumni.ucsd.edu/s/1170/interior-3col.aspx?sid=1170&amp;gid=1&amp;sitebuilder=1&amp;pgid=13&amp;cid=664">Alumni Events Calendar</a></li>
+    </ul>
+    <p>Shopping for something special? Check out the <a target="_blank" href="c-831-alumni.aspx">Alumni Gifts &amp; Clothing store</a>.&nbsp;</p>
+    <p>To redeem your Alumni coupon: In the Comments section, (located on the final page of the ordering process), type the name of the person the coupon was issued to and the coupon number (Example: John Smith - N34564). Alumni coupons are transferable, so the coupon name and order name do not need to match. The discount will be taken when the order is processed.</p>
+    <button class="read-more-hide hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read Less</button>
+    </div>
+    </div>
+    <div class="textbookULs" style="padding:10px;float:left;margin: auto; border: 10px solid white;">
+    <div>
+    <p style="background-color:#006a96;"><strong><span style="padding: 10px; font-size: 24px; color: white;">Students</span></strong></p>
+    <p>Hi and thanks for visiting! Our mission is to provide excellent service to all of the UCSD families, visitors and friends. Anything at all we can assist you with? Please <a href="t-comments.aspx" target="_blank">let us know</a>.<br />
+    </p>
+    <p><strong>&nbsp;</strong></p>
+    <p><strong>&nbsp;</strong></p>
+    <p><strong>Important links:</strong></p>
+    </div>
+    <button class="read-more-show2 hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read More</button>
+    <div class="read-more-content2">
+    <p><strong>UCSD Bookstore Resources</strong><br />
+    <a href="t-account.aspx" target="_blank">Student Accounts</a><br />
+    <a href="c-203-apparel.aspx" target="_blank">Apparel</a><br />
+    <a href="https://ucsandiegobookstore.com/c-622-repair-shop.aspx" target="_blank">Computer Repair</a><br />
+    <a href="c-301-computers.aspx" target="_blank">Computers for UCSD</a><br />
+    <a href="c-213-gifts.aspx" target="_blank">Gifts &amp; Emblematics</a><br />
+    <a href="t-gradcentral.aspx" target="_blank">
+    <g class="gr_ gr_29 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del" id="292" data-gr-id="29">Grad</g>
+    Central</a><br />
+    <a href="t-jobs.aspx" target="_blank">Jobs</a><br />
+    <a href="c-417-medical-books-and-supplies.aspx" target="_blank">Medical Instruments</a><br />
+    <a href="t-news.aspx" target="_blank">Sales &amp; Events</a><br />
+    <a href="c-233-triton-spirit.aspx" target="_blank">Triton Spirit Shop</a></p>
+    <p><strong>Student Resources</strong><br />
+    <a href="https://act.ucsd.edu/myTritonlink20/display.htm " target="_blank">TritonLink</a><br />
+    <a href="http://provost.ucsd.edu/colleges/" target="_blank">Colleges</a><br />
+    <a href="http://admissions.ucsd.edu/tours/" target="_blank">Campus Tours</a><br />
+    <a href="http://students.ucsd.edu/finances/financial-aid/index.html" target="_blank">Financial Aid Office</a><br />
+    <a href="http://www.ucsd.edu/catalog/" target="_blank">General Course Catalog</a><br />
+    </p>
+    <button class="read-more-hide2 hide" style="background-color:#00c6d7;color:white;padding:10px;border:none;">Read Less</button>
+    </div>
+    </div>
+    <br />
+    <br />
+    <script>
+        $('.read-more-content').addClass('hide')
+        $('.read-more-show, .read-more-hide').removeClass('hide')
+    
+        // Set up the toggle effect:
+        $('.read-more-show').on('click', function(e) {
+            $(this).next('.read-more-content').removeClass('hide');
+            $('.hideonclick').addClass('hide');
+            $(this).addClass('hide');
+            e.preventDefault();
+        });
+    
+        // Changes contributed by @diego-rzg
+        $('.read-more-hide').on('click', function(e) {
+            var p = $(this).parent('.read-more-content');
+            p.addClass('hide');
+            $('.hideonclick').removeClass('hide');
+            p.prev('.read-more-show').removeClass('hide'); // Hide only the preceding "Read More"
+            e.preventDefault();
+        });
+    
+        $('.read-more-content2').addClass('hide')
+        $('.read-more-show2, .read-more-hide2').removeClass('hide')
+    
+        // Set up the toggle effect:
+        $('.read-more-show2').on('click', function(e) {
+            $(this).next('.read-more-content2').removeClass('hide');
+            $('.hideonclick2').addClass('hide');
+            $(this).addClass('hide');
+            e.preventDefault();
+        });
+    
+        // Changes contributed by @diego-rzg
+        $('.read-more-hide2').on('click', function(e) {
+            var p = $(this).parent('.read-more-content2');
+            p.addClass('hide');
+            $('.hideonclick2').removeClass('hide');
+            p.prev('.read-more-show2').removeClass('hide'); // Hide only the preceding "Read More"
+            e.preventDefault();
+        });
+    
+        $('.read-more-content3').addClass('hide')
+        $('.read-more-show3, .read-more-hide3').removeClass('hide')
+    
+        // Set up the toggle effect:
+        $('.read-more-show3').on('click', function(e) {
+            $(this).next('.read-more-content3').removeClass('hide');
+            $('.hideonclick3').addClass('hide');
+            $(this).addClass('hide');
+            e.preventDefault();
+        });
+    
+        // Changes contributed by @diego-rzg
+        $('.read-more-hide3').on('click', function(e) {
+            var p = $(this).parent('.read-more-content3');
+            p.addClass('hide');
+            $('.hideonclick3').removeClass('hide');
+            p.prev('.read-more-show3').removeClass('hide'); // Hide only the preceding "Read More"
+            e.preventDefault();
+        });
+    </script>
+    <a href="t-wallpapers.aspx"><img alt="" style="width:100%;padding-top:75px;" src="/images/ClickthroughTemplate_1up_Wallpaper.jpg" /></a>
+    <p>&nbsp;</p>
