@@ -1,0 +1,70 @@
+<style>
+  .text {
+    max-width: 900px;
+  }
+
+  .content {
+    margin: auto;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  @media (min-width:769px) {
+    .form {
+      width: 50%;
+    }
+  }
+</style>
+<div id="fb-root">&nbsp;</div>
+
+<script>
+  (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<p style="text-align:center;"><img alt="" src="/Images/computers/WelcomeTritons_General.png" /><br />
+  <br />
+  <br />
+</p>
+<div class="content" style="max-width:900px;">
+  <span style="font-size: 26px; color: #0070c0;">
+    <strong><span style="font-size: 36px; font-family: Arial;">Sign up for our monthly newsletter - stay
+        connected</span><span style="font-size: 16px;"><em><br />
+          Be the first to hear about all our sales and events in the UC San Diego Bookstore. It pays to be in the
+          know!</em></span><br />
+    </strong></span>
+  <p><em> </em></p>
+  <p><em>Please fill out the form below to sign up!</em><br />
+  </p>
+  <div class="container">
+    <div class="main">
+      <iframe name="hidden_iframe" style="display:none;" id="hidden_iframe"
+        onload="if(submitted) {window.alert('Thank you for signing up!')"></iframe>
+      <form target="hidden_iframe"
+        action="https://script.google.com/macros/s/AKfycbxG9GHKVUAjxWqG01-OsYN5l5XMdLb8NyBYUgFlFnlCMjnYkxQc/exec"
+        method="get" class="form" onreset="return alert('Thank you for signing up!');">
+        <input class="form-control input-sm" id="firstName" name="firstName" placeholder="First Name* (Required)"
+          required="required" type="text" minlength="1" required/>
+        <input class="form-control input-sm" id="lastName" name="lastName" placeholder="Last Name* (Required)"
+          required="required" type="text" required/>
+        <input class="form-control input-sm" id="email" name="email" placeholder="Email* (Required)" required="required"
+          type="email" required/>
+        <input class="wowbutton" type="submit" value="Submit" onclick="submit(); reset(); return false;"
+          onreset="return alert('Thank you for signing up!');" />
+      </form>
+    </div>
+  </div>
+  <span style="font-size: 20px; color: #00b0f0;">
+    <strong><br />
+      Thank you!</strong></span><br />
+</div>
+<script>
+
+</script>
