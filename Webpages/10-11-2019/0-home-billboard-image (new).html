@@ -1,0 +1,207 @@
+<style>
+    .navbar-default {
+        color: #FFCD00;
+        background-color: white;
+        border-color: transparent;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        color: black;
+    }
+
+    .home-heading {
+        font-weight: bold;
+        font-size: 38px;
+        color: #006a96 !important;
+    }
+
+    .panel-heading.featured-entity-name-wrap {
+        background-color: white;
+    }
+
+    .panel-default {
+        border-color: transparent !important;
+        border-radius: 0px !important;
+    }
+
+    .Thing {
+        background-color: #006a96 !important;
+        float: none;
+    }
+
+    .panel {
+        box-shadow: 0px 0px 0px 0px !important;
+    }
+
+    .item.active {
+        width: 100%;
+    }
+
+    .SecondBar {
+        margin: auto;
+        text-align: center;
+        background-color: #006a96;
+    }
+
+    .colors {
+        color: #5c5c5c;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+    }
+
+    .colors:visited {
+        color: #5c5c5c;
+        text-decoration: none;
+    }
+
+    .colors:hover {
+        color: #FFCD00;
+        text-decoration: none;
+    }
+
+    .colors:focus {
+        color: #5c5c5c;
+        text-decoration: none;
+        outline: none;
+    }
+
+    .colors:active {
+        color: #5c5c5c;
+        text-decoration: none;
+    }
+
+    .colors {
+        font-size: 2.0vw
+    }
+
+    @media (max-width: 768px) {
+        .colors {
+            font-size: 4.0vw
+        }
+    }
+
+    @media (min-width:1400px) {
+        .colors {
+            font-size: 1vw
+        }
+    }
+
+    .row.home-image-blocks {
+        background-color: #E8E8E8;
+    }
+
+    .carousel-control {
+        width: 7%;
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    .footer-wrapper {
+        border-top: 50px solid #00c6d7 !important;
+    }
+</style>
+<script>
+    document.getElementById("carousel-inner").onmouseover = stop;
+    document.getElementById("carousel-inner").onmouseout = play;
+</script>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <!-- The top image has to be 1500x513 pixels, the middle image has to be 971x526 pixels, and the bottom image has to be 501x508 pixels (for all carousel slides) -->
+        <div class="item active">
+            <a href="https://ucsandiegobookstore.com/c-306-dell.aspx">
+                <picture>
+                    <source class="d-block w-100" srcset="/images/computers/DellBTS19Ad1.jpg"
+                        media="(min-width: 1100px)">
+                    </source>
+                    <source class="d-block w-100" srcset="/images/computers/DellBTS19Ad2.jpg"
+                        media="(min-width: 768px)">
+                    </source>
+                    <img class="d-block w-100" srcset="/images/computers/DellBTS19Ad3.jpg" alt="Homepage Image" />
+                </picture>
+            </a>
+        </div>
+        <div class="item">
+            <picture>
+                <source class="d-block w-100" srcset="/Images/Banners/StudentAds/Student4Ad3.jpg"
+                    media="(min-width: 1100px)">
+                </source>
+                <source class="d-block w-100" srcset="/Images/Banners/StudentAds/Student4Ad2.png"
+                    media="(min-width: 768px)">
+                </source>
+                <img class="d-block w-100" srcset="/Images/Banners/StudentAds/Student4Ad1.png" alt="Homepage Image" />
+            </picture>
+        </div>
+        <div class="item">
+            <a href="https://ucsandiegobookstore.com/t-tritonfoodpantry.aspx">
+                <picture>
+                    <source class="d-block w-100" srcset="/images/Banners/TritonFoodPantry/Triton-food-pantry-LRG.jpg"
+                        media="(min-width: 1100px)">
+                    </source>
+                    <source class="d-block w-100" srcset="/images/Banners/TritonFoodPantry/Triton-food-pantry-MED.jpg"
+                        media="(min-width: 768px)">
+                    </source>
+                    <img class="d-block w-100" srcset="/images/Banners/TritonFoodPantry/Triton-food-pantry-Small.jpg"
+                        alt="Homepage Image" />
+                </picture>
+            </a>
+        </div>
+        <div class="item">
+            <picture>
+                <source class="d-block w-100" srcset="/Images/Banners/StudentAds/Student5Ad3_New.jpg"
+                    media="(min-width: 1100px)">
+                </source>
+                <source class="d-block w-100" srcset="/Images/Banners/StudentAds/Student5Ad2.png"
+                    media="(min-width: 768px)">
+                </source>
+                <img class="d-block w-100" srcset="/Images/Banners/StudentAds/Student5Ad1.png" alt="Homepage Image" />
+            </picture>
+        </div>
+        <div class="item">
+            <picture>
+                <source class="d-block w-100" srcset="/Images/Banners/StudentAds/Student6Ad3.png"
+                    media="(min-width: 1100px)">
+                </source>
+                <source class="d-block w-100" srcset="/Images/Banners/StudentAds/Student6Ad2.png"
+                    media="(min-width: 768px)">
+                </source>
+                <img class="d-block w-100" srcset="/Images/Banners/StudentAds/Student6Ad1.png" alt="Homepage Image" />
+            </picture>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <div class="SecondBar" style="height:10%; margin-left:-40px; background-color: #00c6d7;">
+        <ul class="Thing" style="max-width:1200px; margin: auto; position: relative; background-color: #00C6D7;">
+            <div style="padding-top:10px; padding-bottom:10px; margin-left:10px; width:25%; float:left;color:white;">
+                <a class="colors" href="/t-hours-location.aspx">Hours/Locate</a>
+            </div>
+            <div style="padding-top:10px; padding-bottom:10px; margin-right:-10px; width:25%; float:left;color:white;">
+                <a class="colors" href="/t-jobs.aspx">Jobs</a>
+            </div>
+            <div style="padding-top:10px; padding-bottom:10px; margin-left:-10px; width:25%; float:left;color:white;">
+                <a class="colors" href="/t-events.aspx">News/Events</a>
+            </div>
+            <div style="padding-top:10px; padding-bottom:10px; width:25%; float:left;color:white;">
+                <a class="colors" href="/t-resources.aspx">Resources</a>
+            </div>
+        </ul>
+    </div>
+</div>
