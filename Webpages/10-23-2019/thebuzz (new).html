@@ -1,0 +1,135 @@
+<style>
+    @media only screen and (max-width: 750px) {
+        .banner img {
+            text-align: center;
+            width: 90vw;
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        table {
+            width: 90vw;
+            max-width: 499px;
+        }
+
+        td img {
+            width: 100% !important;
+        }
+
+        td input {
+            width: 12em;
+        }
+
+        #CI_submit {
+            width: 6em;
+        }
+
+        #form_label_display {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<p style="text-align: center;" class="banner"><a href="https://ucsandiegobookstore.com/t-news.aspx"><img alt=""
+            src="/Images/UCSD/MonthlySpecialsWebBanner700x200.png" style="text-align:center;" /></a>
+    <br />
+    <br /></p>
+
+<form name="CI_subscribeForm" id="CI_subscribeForm">
+    <table style="border: 1px solid #333333; background-color: #FFFFFF; padding: 8px;" width="399" cellspacing="0"
+        cellpadding="3" border="0" align="center">
+        <tbody>
+            <tr>
+                <td><img alt="" src="http://portal.emailnetworks.com/user/25244/image/BuzzPopupHeader.png"
+                        style="border-width: 0px; border-style: solid; max-width: 499px; height: 41px;" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="padding: 8px;" width="80%" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td id="form_label_display"
+                                    style="padding: 3px; font-family:Arial, Helvetica, sans-serif;" align="center; ">You
+                                    can subscribe to our mailing list by filling out the form below and clicking on the
+                                    "Subscribe!" button.</td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 3px; width: 35%;" align="right">
+                                                    <span
+                                                        style="font-family: Arial, Helvetica, sans-serif; color: #333333;">
+                                                        <strong><span style="color: #990000;">*</span></strong>Email
+                                                        Address:
+                                                    </span>
+                                                </td>
+                                                <td style="padding: 3px; width: 65%;">
+                                                    <div style="text-align: left;"><span
+                                                            style="font-family: Arial, Helvetica, sans-serif;">
+                                                            <input size="30" name="CI_email" maxlength="150"
+                                                                type="text" id="buzzEmailid"/>
+                                                        </span></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 3px; width: 35%;" align="right">
+                                                    <span style="font-family: Arial, Helvetica, sans-serif; color: #333333;">
+                                                        First Name:
+                                                    </span>
+                                                </td>
+                                                <td style="padding: 3px; width: 65%;">
+                                                    <div style="text-align: left;"><span
+                                                            style="font-family: Arial, Helvetica, sans-serif;">
+                                                            <input size="30" name="CI_firstname" maxlength="64"
+                                                                type="text" id="firstnameInput"/>
+                                                        </span></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 3px; width: 35%;" align="right">
+                                                    <span style="font-family: Arial, Helvetica, sans-serif; color: #333333;">
+                                                        Last Name:
+                                                    </span>
+                                                </td>
+                                                <td style="padding: 3px; width: 65%;">
+                                                    <div style="text-align: left;"><span
+                                                            style="font-family: Arial, Helvetica, sans-serif;">
+                                                            <input size="30" name="CI_lastname" maxlength="64"
+                                                                type="text" id="lastnameInput" />
+                                                        </span></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="padding: 3px 3px 6px 3px;">
+                                                    <p style="text-align: center;"> <span
+                                                            style="font-size: 14px; font-family: Arial;">
+                                                            <input style="background-color: #00c6d7;
+                                        border-color: #00c6d7; color:#FFFFFF;" id="CI_submit" name="submit"
+                                                                value="Subscribe" type="submit" onclick="directAdd()"/>
+                                                        </span></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+<script>
+    function directAdd() {
+        var email = document.getElementById('buzzEmailid').value;
+        var firstname = document.getElementById('firstnameInput').value;
+        var lastname = document.getElementById('lastnameInput').value;
+        document.writeln('<img src="http://bm5150.com/public/?q=direct_add&fn=Public_DirectAddForm&id=ccomnqijpezldqcddvfuxeavdqumbnh&email='+email+'&field1=firstname,set,'+firstname+'&field2=lastname,set,'+lastname+'&list2=0be003ec00000000000000000000000b4ab6&comment=DirectAdd" width="0" height="0" border="0" alt=""/>');
+    }
+</script>

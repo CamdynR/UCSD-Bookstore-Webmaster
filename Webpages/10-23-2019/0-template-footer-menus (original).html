@@ -1,0 +1,188 @@
+<style>
+    .footer-wrapper {
+    border-top: 50px solid #00c6d7;
+    }
+</style>
+<div class="footer-menu-wrap">
+<ul class="col-sm-12 col-md-3 firstMenu">
+    <li class="footerHeading">Customer Service</li>
+    <li><a rel="nofollow" href="(!TopicLink Name='aboutusandcontactinfo'!)">Contact Us</a></li>
+    <li><a rel="nofollow" href="(!Url ActionName='Index' ControllerName='Account'!)#OrderHistory">Order Tracking</a></li>
+    <li><a href="#miniwish-modal" data-toggle="modal" rel="nofollow">Wishlist</a></li>
+    <li><a rel="nofollow" href="(!Url ActionName='Index' ControllerName='Account'!)">Your Account</a></li>
+    <li><a href="(!TopicLink Name='hours-location'!)">Hours</a></li>
+</ul>
+<ul class="col-sm-12 col-md-3">
+    <li class="footerHeading">Store Policies &amp; Info</li>
+    <li><a rel="nofollow" href="(!TopicLink Name='shipping'!)">Shipping</a></li>
+    <li><a rel="nofollow" href="(!TopicLink Name='returns'!)">Returns</a></li>
+    <!--<li><a rel="nofollow" href="(!TopicLink Name='faq'!)">FAQs</a></li>-->
+    <li><a rel="nofollow" href="(!TopicLink Name='privacy'!)">Privacy Policy</a></li>
+</ul>
+<ul class="col-sm-12 col-md-3">
+    <li class="footerHeading">Helpful Links</li>
+    <li><a href="(!TopicLink Name='aboutusandcontactinfo'!)">About Us</a><br />
+    </li>
+    <li><a href="(!TopicLink Name='Sustainability'!)">Sustainability</a></li>
+    <li><a href="http://athletics.ucsd.edu/">Triton Athletics <br />
+    </a></li>
+    <li><a href="http://www.ucsd.edu/">UC San Diego</a></li>
+    <li><a href="https://ucsandiegobookstore.com/t-marketing.aspx/">Marketing</a></li>
+</ul>
+<ul class="col-sm-12 col-md-3">
+    <li class="footerHeading">Follow Us</li>
+    <li class="social-links">
+    <div class="footer-social-icons">
+    (!TOPIC Name="0-template-social-icons"!)</div>
+    </li>
+    <SCRIPT language="Javascript"> 
+<!-- 
+
+//ENTER ALL THE REQURED FIELDS NAMES HERE
+var rfnames=new Array(); var rfdesc=new Array(); 
+
+
+// isEmail (STRING s [, BOOLEAN emptyOK])
+// whitespace characters
+var whitespace = " \t\n\r";
+
+// 
+// Email address must be of form a@b.c ... in other words:
+// * there must be at least one character before the @
+// * there must be at least one character before and after the .
+// * the characters @ and . are both required
+function isValidEmail(s)
+{   
+                if (isEmpty(s)) return false;
+   
+                // is s whitespace?
+                if (isWhitespace(s)) return false;
+                    
+                // there must be >= 1 character before @, so we
+                // start looking at character position 1 
+                // (i.e. second character)
+                var i = 1;
+                var sLength = s.length;
+
+                // look for @
+                while ((i < sLength) && (s.charAt(i) != "@"))
+                { i++
+                }
+
+                if ((i >= sLength) || (s.charAt(i) != "@")) return false;
+                else i += 2;
+
+                // look for .
+                while ((i < sLength) && (s.charAt(i) != "."))
+                { i++
+                }
+
+                // there must be at least one character after the .
+                if ((i >= sLength - 1) || (s.charAt(i) != ".")) return false;
+                else return true;
+}
+
+// Check whether string s is empty.
+function isEmpty(s)
+{   
+                return ((s == null) || (s.length == 0))
+}
+
+// Returns true if string s is empty or 
+// whitespace characters only.
+function isWhitespace(s)
+{   
+                var i;
+
+    // Is s empty?
+    if (isEmpty(s)) return true;
+
+    // Search through string characters one by one
+    // until we find a non-whitespace character.
+    // When we do, return false; if we dont, return true.
+    for (i = 0; i < s.length; i++)
+   {   
+                                // Check that current character isnt whitespace.
+                                var c = s.charAt(i);
+
+                                if (whitespace.indexOf(c) == -1) return false;
+    }
+    // All characters are whitespace.
+    return true;
+}
+
+function checkForm() { 
+                var message = "";
+                
+                if (!isValidEmail(document.subscribeForm.elements['EmailAddress'].value)) {
+                document.subscribeForm.elements['EmailAddress'].style.backgroundColor='yellow';
+                                //alert("Please enter a valid Email Address. (yourname@domain.com)");
+                                message = "Please enter a valid Email Address. (yourname@domain.com)\n\r" ;
+                                document.subscribeForm.elements['EmailAddress'].focus();
+                                
+                }
+                
+                
+                for(var i=0; i<rfnames.length; i++) { 
+                                if (document.subscribeForm.elements[rfnames[i]].value == "") {
+                                document.subscribeForm.elements[rfnames[i]].style.backgroundColor='yellow';
+                                message = message + rfdesc[i] + " is required \n\r";
+                                }
+                }
+
+                if (message.length > 1) { 
+                                alert(message);
+                                return false;
+                }
+
+}
+
+//-->
+    </SCRIPT>
+    <form action="http://portal.emailnetworks.com/wc/wc.cfm" name="subscribeForm" method="post" onsubmit="return checkForm();">
+        <table style="padding: 8px;" max-width="100%" border="0" align="left" cellspacing="0" cellpadding="3">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;"> <img alt="" src="/Images/UCSD/BuzzPopupHeader.png" style="border-width: 0px; border-style: solid; max-width: 100%;" /></td>
+                </tr>
+                <input name="thankyou" value="https://ucsandiegobookstore.com/t-registered.aspx" type="hidden" />
+                <input name="err" value="http://email.emailnetworks.com/wc/error.cfm" type="hidden" />
+                <input name="Action" value="sub" type="hidden" />
+                <input name="LID" value="2471654786" type="hidden" />
+                <input name="MID" value="145106016" type="hidden" />
+                <tr>
+                    <td>
+                    <table style="padding: 8px;" max-width="100%" border="0" align="center" cellspacing="0" cellpadding="3">
+                        <tbody>
+                            <tr>
+                                <td align="center">Sign-up for our monthly newsletter!</td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                <table style="width: 100%;" border="0" align="center" cellspacing="0" cellpadding="3">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 100%;">
+                                            <div style="text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif;">
+                                            <input id="footerEmailSub" class="form-control input-sm search-box" size="30" name="EmailAddress" placeholder="JohnDoe@ucsd.edu" type="email" />
+                                            </span></div>
+                                            <p style="text-align: center;"> <span style="font-family: Arial, Helvetica, sans-serif;">
+                                            <input class="btn btn-primary btn-sm search-go" name="submit" value=" Join " type="submit" />
+                                            </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</ul>
+</div>
