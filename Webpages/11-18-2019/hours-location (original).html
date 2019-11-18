@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bookstore Hours</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    </head>
+    <body style="zoom: 150%;" contenteditable="true">
+        <style>
+            @media (max-width:768px) {
+            .textbookULs {
+            width: 100%;
+            }
+            }
+            @media (min-width:769px) {
+            .textbookULs {
+            width: 33%;
+            }
+            }
+            @media (min-width:1200px) {
+            .textbookULs {
+            width: 33%;
+            height: initial;
+            }
+            }
+            .noshow {
+            list-style-type: none;
+            }
+            @media (min-width:350px) {
+            .col-xs-3 {
+            font-size: 1.5vw;
+            }
+            }
+            @media (min-width:480px) {
+            .col-xs-3 {
+            font-size: 1.8vw;
+            }
+            }
+            @media (min-width:768px) {
+            .col-xs-3 {
+            font-size: 1.5vw;
+            }
+            }
+            @media (min-width:1200px) {
+            .col-xs-3 {
+            font-size: initial;
+            }
+            }
+            @media (min-width:200px) {
+            .col-xs-12 {
+            font-size: 2.5vw;
+            }
+            }
+            @media (min-width:480px) {
+            .col-xs-12 {
+            font-size: 1.8vw;
+            }
+            }
+            @media (min-width:768px) {
+            .col-xs-12 {
+            font-size: 1.5vw;
+            }
+            }
+            @media (min-width:1200px) {
+            .col-xs-12 {
+            font-size: initial;
+            }
+            }
+        </style>
+        <div class="container-fluid">
+        <div class="row">
+        </div>
+        </div>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-xs-3" style="background-color: #006a96; border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <img alt="" src="/Images/mascots.png" class="center-block img-responsive" /></div>
+        <div class="col-xs-3" style="background-color: #dee8f2; border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <img alt="" src="/Images/bks2.png" class="center-block img-responsive" /></div>
+        <div class="col-xs-3" style="background-color: rgba(250,224,117,0.5); border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <img alt="" src="/Images/sun2.png" class="center-block img-responsive" /></div>
+        <div class="col-xs-3" style="background-color: rgba(242,210,230,0.5); border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <img alt="" src="/Images/Audreys.png" class="center-block img-responsive" /></div>
+        </div>
+        </div>
+        <div class="container-fluid" style="font-size:1.0vw;">
+        <div class="row">
+        <!--HOURS/DATES-->
+        <div class="col-xs-12" style="background-color: #ffd602; position:relative;border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <span style="color: #006a96;"><strong>Summer Hours
+        </strong><em>(Jun - Sept)</em></span></div>
+        <div class="col-xs-3" style="background-color:#006a96;border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <p>
+        <span style="color: white;"></span></p>
+        <p><span style="color: white;">Mon - Thu<br />
+        Friday<br />
+        Saturday<br />
+        Sunday</span></p>
+        </div>
+        <div class="col-xs-3" style="background-color:#dee8f2;border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <p style="text-align: center;">
+        <span style="color: #006a96;"></span></p>
+        <p style="text-align: center;"><span style="color: #006a96;">8:00am - 6:00pm<br />
+        8:00am - 6:00pm<br />
+        11:00am - 4:00pm<br />
+        CLOSED</span></p>
+        </div>
+        <div class="col-xs-3" style="background-color:rgba(250,224,117,0.5);border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <p style="text-align: center;">
+        <span style="color: #006a96;"></span></p>
+        <p style="text-align: center;"><span style="color: #006a96;">7:00am - 9:00pm<br />
+        7:00am - 6:00pm<br />
+        11:00am - 5:00pm<br />
+        11:00am - 5:00pm</span></p>
+        </div>
+        <div class="col-xs-3" style="background-color:rgba(242,210,230,0.5);border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <p style="text-align: center;">
+        <span style="color: #006a96;"></span></p>
+        <p style="text-align: center;"><span style="color: #006a96;">8:00am - 11:00pm<br />
+        8:00am - 5:00pm<br />
+        11:00am - 5:00pm<br />
+        11:00am - 9:00pm</span></p>
+        </div>
+        </div>
+        </div>
+        <div class="container-fluid" style="font-size:1.0vw;">
+        <div class="row">
+        <div class="col-xs-12" style="background-color: #ffd602;border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <span style="color: #0170a8;"><strong>2019 Exceptions to Regular
+        Hours </strong><em>(revised August
+        27th,
+        2019)</em></span></div>
+        <div class="col-xs-3" style="background-color:#006a96;border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <p><span style="color: white;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <strong>Rush (Class Starts)</strong><br />
+        (Sep 26 - Oct 2)<br />
+        Thu Sep 26<br />
+        Fri Sep 27<br />
+        Sun Sep 29<br />
+        Mon Sep 30<br />
+        Tue Oct 1<br />
+        Wed Oct 2</span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p><span style="color: white;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <strong>Homecoming Weekend</strong><br />
+        Sat Oct 19<br />
+        Sun Oct 20</span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p><span style="color: white;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <strong>Veterans Day</strong><br />
+        Sun - Mon&nbsp;&nbsp;&nbsp;Nov 10-11</span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p><span style="color: white;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <strong>Thanksgiving</strong><br />
+        &nbsp;&nbsp;Thu - Sat&nbsp;&nbsp;&nbsp;Nov 28-30</span>
+        </p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p><span style="color: white;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <strong>Finals Week</strong><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sun&nbsp;&nbsp;&nbsp;Dec
+        8<br />
+        Mon - Thu&nbsp;&nbsp;&nbsp;Dec 9-12<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;&nbsp;&nbsp;Dec
+        13<br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p><span style="color: white;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <strong>Week after Finals</strong><br />
+        Mon - Thu&nbsp;&nbsp;&nbsp;Dec 16-19<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;&nbsp;&nbsp;Dec
+        20<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sat&nbsp;&nbsp;&nbsp;Dec
+        21<br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p><span style="color: white;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <strong>Winter Holidays</strong><br />
+        Sun Dec 22 - Wed Jan 1<br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <br />
+        </div>
+        <div class="col-xs-3" style="background-color:#dee8f2;border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <span style="color: #006a96;">
+        <center>
+        </center>
+        </span>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;"><br />
+        7:30am - 8:00pm<br />
+        7:30am - 6:00pm<br />
+        11:00am - 4:00pm<br />
+        8:00am - 8:00pm<br />
+        8:00am - 7:00pm<br />
+        8:00am - 6:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">9:00am - 4:00pm<br />
+        9:00am - 4:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">
+        CLOSED<br />
+        7:30am - 6:00pm<br />
+        7:30am - 6:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">
+        8:00am - 5:00pm<br />
+        8:00am - 5:00pm<br />
+        CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="text-align: center; margin-bottom: -40px;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp;<br />
+        <br />
+        </span></p>
+        </div>
+        <div class="col-xs-3" style="background-color:rgba(250,224,117,0.5); border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <span style="color: #006a96;">
+        <center>
+        </center>
+        </span>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;"><br />
+        7:00am - 9:00pm<br />
+        7:00am - 6:00pm<br />
+        11:00am - 5:00pm<br />
+        7:00am - 9:00pm<br />
+        7:00am - 9:00pm<br />
+        7:00am - 9:00pm<br />
+        </span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <span style="color: #006a96;">11:00am - 5:00pm<br />
+        11:00am - 5:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">
+        11:00am - 5:00pm<br />
+        7:00am - 6:00pm<br />
+        7:00am - 6:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">
+        7:00am - 6:00pm<br />
+        7:00am - 6:00pm<br />
+        CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="text-align: center; margin-bottom: -40px;"><span style="color: #006a96;">&nbsp;</span><br />
+        <br />
+        </p>
+        </div>
+        <div class="col-xs-3" style="background-color:rgba(242,210,230,0.5);border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <span style="color: #006a96;">
+        <center>
+        </center>
+        </span>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;"><br />
+        8:00am - 11:00pm<br />
+        8:00am - 5:00pm<br />
+        11:00am - 9:00pm<br />
+        8:00am - 11:00pm<br />
+        8:00am - 11:00pm<br />
+        8:00am - 11:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">11:00am - 5:00pm<br />
+        11:00am - 9:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">
+        11:00am - 11:00pm <br />
+        8:00am - Midnight<br />
+        8:00am - Midnight</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">
+        8:00am - Midnight<br />
+        8:00am - 6:00pm<br />
+        11:00am - 5:00pm</span><br />
+        </span></p>
+        <p style="margin-bottom: -40px;">&nbsp;</p>
+        <p style="text-align: center;"><span style="color: #006a96;">&nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;<br />
+        <br />
+        <span style="color: #006a96;">CLOSED</span><br />
+        </span></p>
+        <p style="text-align: center; margin-bottom: -40px;"><span style="color: #006a96;">&nbsp;</span><br />
+        <br />
+        </p>
+        </div>
+        <div class="col-xs-3" style="background-color: white; text-align: center;border-right: 0.25vw solid white; border-left: 0.25vw solid white;">
+        <span style="color: #006a96;">
+        <center>
+        </center>
+        </span>
+        <p>
+        <br />
+        <!--COL 4-->
+        <span style="color: #006a96;">
+        </span></p>
+        <p><span style="color: #0170a8;">
+        </span>
+        </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-10" style="background-color: white;">&nbsp;</div>
+        <a href="https://ucsd.amazon.com/"><img alt="" style="width:100%;" src="/Images/Hours/AmazonHoursLogo.jpg" class="center-block img-responsive" /></a>
+        <div class="col-xs-1">&nbsp;</div>
+        <div class="col-sm-12">
+        <br />
+        <hr />
+        <div style="width: 100%; height:500px; margin-right: auto;">
+        <iframe style="border:0;" src="https://www.google.com/maps/embed/v1/place?q=uc%20san%20diego%20bookstore&amp;key=AIzaSyBhQRXkOppNsSDbezGA--ngRp0w3TEPSTI" width="100%" height="100%" frameborder="0"></iframe>&nbsp;</div>
+        <br />
+        <div style="padding:10px;float:left;margin: auto; border: 3px solid white;background-color: rgba(0,198,215,0.25);width:100%;">
+        <div class="leftblock"><strong style="color: inherit; font-family: inherit; font-size: 18px;">UCSD
+        Bookstore</strong></div>
+        <div><strong><span class="epson" style="margin-left: 10px;">&nbsp;</span>General Driving
+        Directions to
+        Gilman Parking Structure:</strong></div>
+        <div><strong>&nbsp;</strong>
+        <div style="margin: 0 auto; display:table;vertical-align: top; clear:both;">
+        <ul class="textbookULs" style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+            <li class="noshow"><strong>&nbsp;</strong></li>
+            <li class="noshow"><strong>From North:
+            </strong></li>
+            <li class="noshow"><strong>&nbsp;</strong></li>
+            <li>Take I-5 south.</li>
+            <li>Take the La Jolla Village Drive exit.</li>
+            <li>Turn right onto La Jolla Village Dr.</li>
+            <li>Turn right onto Villa La Jolla Dr.</li>
+            <li>At the end of Villa La Jolla Dr. enter Gilman
+            Parking Structure.</li>
+        </ul>
+        <ul class="textbookULs" style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+            <li class="noshow">&nbsp;</li>
+            <li class="noshow"><strong>From East:</strong></li>
+            <li class="noshow">&nbsp;</li>
+            <li>Take I-8 west.</li>
+            <li>Merge onto I-5 north.</li>
+            <li>Take the La Jolla Village Drive exit.</li>
+            <li>Turn left onto La Jolla Village Drive.</li>
+            <li>Turn right onto Villa La Jolla Dr.</li>
+            <li>At the end of Villa La Jolla Dr. enter Gilman
+            Parking Structure.</li>
+        </ul>
+        <ul class="textbookULs" style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+            <li class="noshow"><strong>&nbsp;</strong></li>
+            <li class="noshow"><strong>From South:
+            </strong></li>
+            <li class="noshow"><strong>&nbsp;</strong></li>
+            <li>Take I-5 north.</li>
+            <li>Take the La Jolla Village Drive exit.</li>
+            <li>Turn left onto La Jolla Village Drive.</li>
+            <li>Turn right onto Villa La Jolla Dr.</li>
+            <li>At the end of Villa La Jolla Dr. enter Gilman
+            Parking Structure.</li>
+        </ul>
+        </div>
+        </div>
+        <p>&nbsp;</p>
+        <strong><a href="http://blink.ucsd.edu/facilities/transportation/permits/index.html" target="_blank">UCSD
+        Parking Permits</a></strong>
+        <br />
+        <br />
+        <strong><a href="https://transportation.ucsd.edu/parking/visitor/index.html">Parking
+        and Transportation For
+        Visitors</a></strong>
+        <br />
+        Find options to park on UC San Diego campus.
+        </div>
+        <br />
+        <p>&nbsp;</p>
+        <div style="padding:10px;float:left;margin: auto; border: 3px solid white;background-color: rgba(252,137,0,0.25);width:100%;">
+        <div class="leftblock"><strong style="color: inherit; font-family: inherit; font-size: 18px;">Amazon@UCSanDiego</strong>
+        </div>
+        <div><strong><span class="epson" style="margin-left: 10px;">&nbsp;</span></strong></div>
+        <div><strong><span class="epson" style="margin-left: 10px;">&nbsp;</span>Directions</strong>
+        </div>
+        <div>
+        <div style="margin: 0 auto; display:table;vertical-align: top; clear:both;">
+        <ul style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+            <li class="noshow"><strong>&nbsp;</strong></li>
+            <li>Amazon@UCSanDiego is located on the first floor,
+            right inside the UC San Diego Bookstore. If
+            you enter 'UCSD Bookstore' in any maps app - it will
+            lead you directly to the Amazon site.
+            </li>
+            <li>To get here, enter through the Bookstore entrance on
+            Lyman Lane. Or go downstairs by the
+            fountain off Library Walk into Price Center Plaza.
+            Or go up the
+            stairs to the Price Center West entrance, through
+            the building, left at door, and then down
+            the stairs. </li>
+            <li>During the week, there is paid parking available,
+            BUT parking is FREE on Sat and Sun
+            anywhere on campus. The closest parking structure is
+            Gilman Parking Structure. See
+            directions above.</li>
+            <li>There is a 20 min loading zone parking available on
+            Russel Lane, off the intersection of
+            Myers Dr and Gilman Dr</li>
+        </ul>
+        <!--<a href="http://ucsd.amazon.com/"><img alt="" src="/Images/AmazonDirections.png" style="text-align:center;" class="left-block img-responsive" /></a>-->
+        </div>
+        </div>
+        </div>
+        </div>
+        <p>&nbsp;</p>
+        <br />
+    </body>
+</html>

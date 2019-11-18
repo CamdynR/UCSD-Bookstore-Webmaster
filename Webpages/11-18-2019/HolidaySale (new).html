@@ -1,0 +1,202 @@
+<style>
+    body {
+        background-color: rgba(0, 106, 150, 0.25);
+    }
+
+    .header-image {
+        left: 50%;
+        margin: -15px auto 0 auto;
+        position: relative;
+        transform: translate(-50%);
+        width: 99vw;
+    }
+
+    #contentContainer {
+        left: 50%;
+        margin: 40px auto;
+        position: relative;
+        transform: translate(-50%);
+        width: 99vw;
+    }
+
+    #gridAllLogo {
+        grid-area: allLogo;
+    }
+
+    #gridDell {
+        grid-area: dell;
+    }
+
+    #gridGiftwrap {
+        grid-area: giftwrap;
+    }
+
+    #gridHolidayBanner {
+        grid-area: banner;
+        max-width: 1035px !important;
+    }
+
+    #gridHolidayBannerSmall {
+        grid-area: bannerSmall;
+        display: none;
+    }
+
+    #gridHydro {
+        grid-area: hydro;
+    }
+
+    #gridMostItems {
+        grid-area: mostItems;
+    }
+
+    #gridOneDay {
+        grid-area: oneDay;
+    }
+
+    #gridPapyrus {
+        grid-area: papyrus;
+    }
+
+    #gridSpirit {
+        grid-area: spirit;
+    }
+
+    #gridUgly {
+        grid-area: ugly;
+    }
+
+    #innerBackground {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        column-gap: 0px;
+        display: grid;
+        grid-row-gap: 25px;
+        grid-template-areas:
+            "banner banner"
+            "mostItems allLogo"
+            "oneDay dell"
+            "ugly hydro"
+            "papyrus spirit"
+            "giftwrap giftwrap";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 342px 328px 328px 223px 223px 290px;
+        height: 1930px;
+        justify-items: center;
+        margin: 0 auto;
+        padding: 40px 12.5px;
+        width: 1100px;
+    }
+
+    #innerBackground img {
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        #innerBackground {
+            grid-template-areas:
+                "bannerSmall"
+                "mostItems"
+                "allLogo"
+                "oneDay"
+                "dell"
+                "ugly"
+                "hydro"
+                "papyrus"
+                "spirit"
+                "giftwrap";
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(10, auto) !important;
+            height: 3460px;
+            width: 100%;
+        }
+
+        #gridHolidayBanner {
+            display: none;
+        }
+
+        #gridHolidayBannerSmall {
+            display: block;
+        }
+    }
+
+    @media only screen and (max-width: 575px) {
+        #innerBackground img {
+            max-width: 400px;
+        }
+
+        #innerBackground {
+            height: 2830px;
+        }
+    }
+
+    @media only screen and (max-width: 475px) {
+        #innerBackground img {
+            max-width: 300px;
+        }
+
+        #innerBackground {
+            height: 2200px;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        #innerBackground img {
+            max-width: 250px;
+        }
+
+        #innerBackground {
+            height: 1885px;
+        }
+    }
+</style>
+
+<div class="header-image">
+    <img alt="" id="banner" style="width:100%; margin:auto;"
+        src="/Images/WebBanner_HolidaySale.png" />
+</div>
+
+<p align="center" id="contentContainer">
+    <div id="innerBackground">
+        <img alt="Holiday Sale November 25th through December 20th" id="gridHolidayBanner"
+            src="https://ucsandiegobookstore.com/Images/Events/HolidaySale/HolidaySaleAd3.png">
+        <img alt="Holiday Sale November 25th through December 20th" id="gridHolidayBannerSmall"
+            src="http://portal.emailnetworks.com/user/25244/image/1HolidaySale.jpg">
+        <br>
+        <br>
+        <img alt="50% off most christmas items" id="gridMostItems"
+            src="http://portal.emailnetworks.com/user/25244/image/2HolidaySale.jpg"><br>
+        <br>
+        <img alt="25% off everything with a UCSD Logo" id="gridAllLogo"
+            src="http://portal.emailnetworks.com/user/25244/image/3HolidaySale_1_.jpg"><br>
+        <br>
+        <a href="https://ucsandiegobookstore.com/c-804-sweatshirts.aspx" id="gridUgly">
+            <img alt="25% off UCSD Ugly Holiday Sweaters"
+                src="http://portal.emailnetworks.com/user/25244/image/4HolidaySale.jpg"></a><br>
+        <br>
+        <a href="https://ucsandiegobookstore.com/search.aspx?searchterm=ornament" id="gridSpirit">
+            <img alt="25% off UCSD Ornaments"
+                src="http://portal.emailnetworks.com/user/25244/image/5HolidaySale.jpg"></a><br>
+        <br>
+        <a href="https://ucsandiegobookstore.com/c-848-hydro-flask.aspx" id="gridHydro">
+            <img alt="25% off Hydro Flasks"
+                src="http://portal.emailnetworks.com/user/25244/image/6HolidaySale.jpg"></a><br>
+        <br>
+        <a href="https://ucsandiegobookstore.com/c-305-apple.aspx" id="gridOneDay">
+            <img alt="Pay No Sales Tax on most Apple Products December 4th"
+                src="http://portal.emailnetworks.com/user/25244/image/7HolidaySale_1_.jpg"></a><br>
+        <br>
+        <img alt="25% off Papyrus and Design brand products" id="gridPapyrus"
+            src="http://portal.emailnetworks.com/user/25244/image/8aHolidaySale_1_.jpg"><br>
+        <br>
+        <a href="https://ucsandiegobookstore.com/c-312-laptop.aspx" id="gridDell">
+            <img alt="Dell XPS 13 (7390) for $1,049 and Dell XPS 15 (7590) for $1,599"
+                src="http://portal.emailnetworks.com/user/25244/image/7HolidaySale_DELL.jpg"></a><br>
+        <br>
+        <a href="https://ucsandiegobookstore.com/default.aspx" id="gridGiftwrap">
+            <img alt="Free gift wrapping in-store from December 2nd through the 13th"
+                src="http://portal.emailnetworks.com/user/25244/image/8HolidaySale.jpg"></a>
+    </div>
+</p>
