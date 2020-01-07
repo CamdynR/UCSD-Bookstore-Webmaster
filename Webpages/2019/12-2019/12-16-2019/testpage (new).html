@@ -1,0 +1,281 @@
+<style>
+  table.GeneratedTable {
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+
+  table.GeneratedTable td,
+  table.GeneratedTable th {
+    border-left: 6px solid white;
+    border-right: 6px solid white;
+  }
+
+  .headImage {
+    text-align: center;
+  }
+
+  .headImage img {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .gap {
+    padding: 0 5px;
+  }
+
+  .centerAlign {
+    text-align: center;
+  }
+
+  .mobileText {
+    color: #006a96;
+    display: none;
+    padding-top: 10px;
+  }
+
+  .padBottom {
+    padding-bottom: 10px;
+  }
+
+  .padTop {
+    padding-top: 10px;
+  }
+
+  .tableDaysText {
+    color: white;
+    padding: 0 15px;
+  }
+
+  .tableHoursText {
+    color: #006a96;
+  }
+
+  #hoursColumn {
+    background-color: #006a96;
+  }
+
+  #bookstoreHours {
+    background-color: #DEE8F2;
+  }
+
+  #sunshineHours {
+    background-color: #fdf0ba;
+  }
+
+  #audreysHours {
+    background-color: #f9e9f3;
+  }
+
+  #regularHours,
+  #exceptionHours {
+    background-color: #FFD602;
+    color: #006a96;
+  }
+
+  #regularHours td,
+  #exceptionHours td {
+    padding-left: 15px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .headImage img {
+      display: none;
+    }
+
+    .mobileText {
+      display: block;
+    }
+
+    .tableDaysText {
+      color: white;
+      padding: 0 10px;
+    }
+
+    table.GeneratedTable th,
+    table.GeneratedTable td {
+      border-bottom: 3px solid white;
+      border-left: none;
+      border-right: none;
+      border-top: 3px solid white;
+      padding: 5px;
+    }
+
+    #mondayThursday span {
+      display: none;
+    }
+
+    #mondayThursday:after {
+      color: white;
+      content: 'Monday - Thursday';
+      padding: 0 10px;
+    }
+
+    #regularHours td,
+    #exceptionHours td {
+      padding-left: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 993px) {
+    .gap {
+      display: none;
+    }
+
+    .breakHere {
+      display: block;
+      padding-left: 15px;
+    }
+
+    .padBottom {
+      height: 40px !important;
+    }
+  }
+
+  @media only screen and (max-width: 385px) {
+    table.GeneratedTable {
+      font-size: 0.9em;
+    }
+
+    .centerAlign {
+      text-align: left;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    table.GeneratedTable {
+      font-size: 0.8em;
+    }
+  }
+</style>
+<table class="GeneratedTable">
+  <colgroup>
+    <col id="hoursColumn">
+    <col id="bookstoreHours" class="textColor">
+    <col id="sunshineHours" class="textColor">
+    <col id="audreysHours" class="textColor">
+  </colgroup>
+  <thead>
+    <tr>
+      <th style="background-color: #006a96;" class="headImage">
+        <img alt="Hours subject to change" src="https://ucsandiegobookstore.com/Images/mascots.png">
+        <p class="mobileText" style="color: white;">Hours Subject to Change</p>
+      </th>
+      <th style="background-color: #DEE8F2;" class="headImage">
+        <img alt="UCSD Bookstore" src="https://ucsandiegobookstore.com/Images/bks2.png">
+        <p class="mobileText">UCSD Bookstore</p>
+      </th>
+      <th style="background-color: #fdf0ba;" class="headImage">
+        <img alt="Sunshine Market" src="https://ucsandiegobookstore.com/Images/sun2.png">
+        <p class="mobileText">Sunshine Market</p>
+      </th>
+      <th style="background-color: #f9e9f3;" class="headImage">
+        <img alt="Audrey's Cafe" src="https://ucsandiegobookstore.com/Images/Audreys.png">
+        <p class="mobileText">Audrey's Cafe</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="regularHours">
+      <td colspan="4">
+        <strong>Regular Hours</strong> <em>(Sept - June)</em>
+      </td>
+    </tr>
+    <tr>
+      <td class="padTop" id="mondayThursday">
+        <span class="tableDaysText">Mon - Thu</span>
+      </td>
+      <td class="centerAlign padTop">
+        <span class="tableHoursText">8:00am - 6:00pm</span>
+      </td>
+      <td class="centerAlign padTop">
+        <span class="tableHoursText">7:00am - 9:00pm</span>
+      </td>
+      <td class="centerAlign padTop">
+        <span class="tableHoursText">8:00am - 11:00pm</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="tableDaysText">Friday</span>
+      </td>
+      <td class="centerAlign">
+        <span class="tableHoursText">8:00am - 6:00pm</span>
+      </td>
+      <td class="centerAlign">
+        <span class="tableHoursText">7:00am - 6:00pm</span>
+      </td>
+      <td class="centerAlign">
+        <span class="tableHoursText">8:00am - 5:00pm</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="tableDaysText">Saturday</span>
+      </td>
+      <td class="centerAlign">
+        <span class="tableHoursText">11:00am - 4:00pm</span>
+      </td>
+      <td class="centerAlign">
+        <span class="tableHoursText">11:00am - 5:00pm</span>
+      </td>
+      <td class="centerAlign">
+        <span class="tableHoursText">11:00am - 5:00pm</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="padBottom">
+        <span class="tableDaysText">Sunday</span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText">CLOSED</span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText">11:00am - 5:00pm</span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText">11:00am - 9:00pm</span>
+      </td>
+    </tr>
+    <tr id="exceptionHours">
+      <td colspan="4">
+        <strong>Exceptions to Regular Hours</strong> <em>(revised December 17th, 2019)</em>
+      </td>
+    </tr>
+    <tr>
+      <td class="padTop">
+        <span class="tableDaysText">
+          <strong>Week after Finals</strong>
+        </span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText"></span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText"></span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText"></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="padBottom">
+        <span class="tableDaysText">
+          Mon - Wed<span class="gap"></span>
+          <span class="breakHere">Dec 16-18</span>
+        </span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText">8:00am - 5:00pm</span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText">7:00am - 6:00pm</span>
+      </td>
+      <td class="centerAlign padBottom">
+        <span class="tableHoursText">8:00am - 6:00pm</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
