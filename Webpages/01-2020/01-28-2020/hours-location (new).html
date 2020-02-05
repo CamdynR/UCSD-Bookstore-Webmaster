@@ -1,0 +1,1385 @@
+<style>
+  table.GeneratedTable {
+    background-color: #ffffff;
+    border: none;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 500px;
+    table-layout: auto;
+    width: 100%;
+  }
+
+  td {
+    width: 50%;
+  }
+
+  .centerAlign {
+    text-align: center;
+  }
+
+  .gap {
+    padding: 0 5px;
+  }
+
+  .headImage {
+    text-align: center;
+  }
+
+  .headImage img {
+    margin: 10px 0;
+    max-height: 56px;
+    max-width: 200px;
+  }
+
+  .mobileText {
+    color: white;
+    display: none;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+
+  .padBottom {
+    padding-bottom: 10px;
+  }
+
+  .padTop {
+    padding-top: 10px;
+  }
+
+  .tableDaysText {
+    color: white;
+    padding: 0 15px;
+  }
+
+  .tableHoursText {
+    color: #042b5e;
+  }
+
+  .tableHoursTextAud {
+    color: rgb(110, 41, 9);
+  }
+
+  .tableHoursTextSun {
+    color: #5a150f;
+  }
+
+  .topTable {
+    margin-bottom: 30px !important;
+  }
+
+  #audreysBtn {
+    background-color: rgb(188, 64, 11);
+  }
+
+  #audreysBtn:hover {
+    background-color: rgb(215, 140, 109);
+  }
+
+  #audreysBtn,
+  #bookstoreBtn,
+  #sunshineBtn {
+    border-radius: 5px;
+    color: white;
+    padding: 5px 0;
+    text-decoration: none;
+    transition: 0.2s ease all;
+    width: 100px;
+  }
+
+  #audreysHours {
+    background-color: #F3CFBE;
+    grid-area: audTable;
+  }
+
+  #audreysHours .headImage img {
+    max-height: 62px;
+    max-width: 200px;
+  }
+
+  #audreysHours .tdBorder {
+    border-bottom: 2px solid #BC400B;
+  }
+
+  #audreysHours .thBorder {
+    border-bottom: 2px solid #F3CFBE;
+  }
+
+  #bookstoreBtn {
+    background-color: rgb(0, 106, 150);
+  }
+
+  #bookstoreBtn:hover {
+    background-color: rgb(102, 166, 192);
+    transition: 0.2s ease all;
+  }
+
+  #bookstoreHours {
+    grid-area: bksTable;
+  }
+
+  #bookstoreHours .tdBorder {
+    border-bottom: 2px solid #006a96;
+  }
+
+  #bookstoreHours .thBorder {
+    border-bottom: 2px solid #DEE8F2;
+  }
+
+  #bookstoreHoursCol {
+    background-color: #DEE8F2;
+  }
+
+  #hoursColumn {
+    background-color: #006a96;
+  }
+
+  #hoursColumnAudreys {
+    background-color: #BC400B;
+  }
+
+  #hoursColumnSunshine {
+    background-color: #8A2C24;
+  }
+
+  #regularHours,
+  #exceptionHours {
+    background-color: #FFD602;
+    color: #006a96;
+  }
+
+  #regularHours td,
+  #exceptionHours td {
+    padding-left: 15px;
+  }
+
+  #storeLinks {
+    align-items: center;
+    display: grid;
+    height: 50px;
+    grid-template-areas:
+      'jump bookstore sunshine audreys';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    width: 100%;
+  }
+
+  #storeLinks p {
+    margin: 0;
+  }
+
+  #sunshineBtn {
+    background-color: rgb(138, 44, 36);
+  }
+
+  #sunshineHours {
+    background-color: #FFCAC4;
+    grid-area: sunTable;
+  }
+
+  #sunshineHours .tdBorder {
+    border-bottom: 2px solid #8A2C24;
+  }
+
+  #sunshineHours .thBorder {
+    border-bottom: 2px solid #FFCAC4;
+  }
+
+  #sunshineBtn:hover {
+    background-color: rgb(185, 128, 124);
+  }
+
+  /* This Tbale Wrapper is to allow the tables to sit
+  next to each other if the screen is wide enough.
+  Unforutnately I forgot that they are different lengths,
+  so it looked a bit wonky.
+  #tableWrapper {
+  display: grid;
+  grid-template-areas:
+  'bksTable audTable'
+  'sunTable sunTable';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+  }
+  */
+  @media only screen and (max-width: 350px) {
+    table.GeneratedTable {
+      font-size: 0.8em;
+    }
+  }
+
+  @media only screen and (max-width: 385px) {
+    table.GeneratedTable {
+      font-size: 0.9em;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    #audreysBtn {
+      grid-area: audreys;
+      width: 93px;
+    }
+
+    #bookstoreBtn {
+      grid-area: bookstore;
+      width: 93px;
+    }
+
+    #storeLinks {
+      grid-template-areas:
+        'jump jump jump'
+        'bookstore sunshine audreys';
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 70px;
+      margin-bottom: 15px;
+    }
+
+    #storeLinks p {
+      grid-area: jump;
+    }
+
+    #sunshineBtn {
+      grid-area: sunshine;
+      width: 93px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    table.GeneratedTable th,
+    table.GeneratedTable td {
+      border-left: none;
+      border-right: none;
+      padding: 5px;
+    }
+
+    .headImage img {
+      display: none;
+    }
+
+    .mobileText {
+      display: block;
+    }
+
+    .tableDaysText {
+      color: white;
+      padding: 0 10px;
+    }
+
+    #regularHours td,
+    #exceptionHours td {
+      padding-left: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 993px) {
+    .breakHere {
+      display: block;
+      padding-left: 15px;
+    }
+
+    .gap {
+      display: none;
+    }
+
+    .padBottom {
+      height: 40px !important;
+    }
+  }
+</style>
+<nav id="storeLinks">
+  <p style="font-weight:bold;">Jump To:</p>
+  <a href="#bookstoreHours" id="bookstoreBtn">Bookstore</a>
+  <a href="#sunshineHours" id="sunshineBtn">Sunshine</a>
+  <a href="#audreysHours" id="audreysBtn">Audreys</a>
+</nav>
+<div id="tableWrapper">
+  <!-- UCSD Bookstore Table Start -->
+  <table id="bookstoreHours" class="GeneratedTable topTable">
+    <colgroup>
+      <col id="hoursColumn" />
+      <col id="bookstoreHoursCol" class="textColor" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="background-color: #006A96;" class="headImage" colspan="2">
+          <img alt="UCSD Bookstore Logo"
+            src="https://ucsandiegobookstore.com/Images/Logos/BookstoreLogo.png" />
+          <h2 class="mobileText">UCSD Bookstore</h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="regularHours">
+        <td colspan="2">
+          <strong>Regular Hours</strong> <em>(September - June)</em>
+        </td>
+      </tr>
+      <tr>
+        <th class="padTop thBorder">
+          <span class="tableDaysText">Monday - Friday</span>
+        </th>
+        <td class="centerAlign padTop tdBorder">
+          <span class="tableHoursText">8:00am - 6:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="thBorder">
+          <span class="tableDaysText">Saturday</span>
+        </th>
+        <td class="centerAlign tdBorder">
+          <span class="tableHoursText">11:00am - 4:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom">
+          <span class="tableDaysText">Sunday</span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText">CLOSED</span>
+        </td>
+      </tr>
+      <tr id="exceptionHours">
+        <td colspan="4">
+          <strong>Exceptions to Regular Hours</strong> <em>(revised January 23rd, 2020)</em>
+        </td>
+      </tr>
+      <!-- Presidents' Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Presidents' Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Monday<span class="gap"></span>
+            <span class="breakHere">Feb 17</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Presidents' Day End -->
+      <!-- Finals Week Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Finals Week</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Mon - Fri<span class="gap"></span>
+            <span class="breakHere">March 16-20</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">7:30am - 6:00pm</span>
+        </td>
+      </tr>
+      <!-- Finals Week End -->
+      <!-- Cesar Chavez Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Cesar Chavez Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Friday<span class="gap"></span>
+            <span class="breakHere">March 27</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">8:00am - 4:00pm</span>
+        </td>
+      </tr>
+      <!-- Cesar Chavez End -->
+      <!-- RUSH Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Rush Week</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">March 29</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursText">11:00am - 4:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Mon - Tue<span class="gap"></span>
+            <span class="breakHere">March 30-31</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursText">7:30am - 8:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Wednesday<span class="gap"></span>
+            <span class="breakHere">April 1</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursText">8:00am - 7:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Thursday<span class="gap"></span>
+            <span class="breakHere">April 2</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">8:00am - 6:00pm</span>
+        </td>
+      </tr>
+      <!-- RUSH End -->
+      <!-- Triton 5k Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Triton 5k</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">April 5</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">11:00am - 4:00pm</span>
+        </td>
+      </tr>
+      <!-- Triton 5k End -->
+      <!-- Triton Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Triton Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">April 11</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">8:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Triton Day End -->
+      <!-- Independent Bookstore Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Independent Bookstore Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">April 25</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">10:00am - 4:00pm</span>
+        </td>
+      </tr>
+      <!-- Independent Bookstore Day End -->
+      <!-- Transfer Triton Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Transfer Triton Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">May 9</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">10:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Transfer Triton Day End -->
+      <!-- Memorial Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Memorial Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">May 25</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Memorial Day End -->
+      <!-- Finals Week Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Finals Week</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Mon - Fri<span class="gap"></span>
+            <span class="breakHere">June 8-12</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursText">7:30am - 6:00pm</span>
+        </td>
+      </tr>
+      <!-- Finals Week End -->
+      <!-- Commencement Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Commencement</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sat - Sun<span class="gap"></span>
+            <span class="breakHere">June 13-14</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText">10:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Commencement End -->
+    </tbody>
+  </table>
+  <!-- UCSD Bookstore Table End -->
+  <!-- Sunshine Market Table Start -->
+  <table id="sunshineHours" class="GeneratedTable topTable">
+    <colgroup>
+      <col id="hoursColumnSunshine" />
+      <col id="sunshineHours" class="textColor" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="background-color: #8A2c24;" class="headImage" colspan="4">
+          <img alt="Sunshine Market Logo"
+            src="https://ucsandiegobookstore.com/Images/Logos/SunshineMarketLogo.png" />
+          <h2 class="mobileText">Sunshine Market</h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="regularHours">
+        <td colspan="4">
+          <strong>Regular Hours</strong> <em>(September - June)</em>
+        </td>
+      </tr>
+      <tr>
+        <th class="padTop thBorder">
+          <span class="tableDaysText">Monday - Thursday</span>
+        </th>
+        <td class="centerAlign padTop tdBorder">
+          <span class="tableHoursTextSun">7:00am - 9:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="thBorder">
+          <span class="tableDaysText">Friday</span>
+        </th>
+        <td class="centerAlign tdBorder">
+          <span class="tableHoursTextSun">7:00am - 6:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText">Saturday - Sunday</span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextSun">11:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <tr id="exceptionHours">
+        <td colspan="4">
+          <strong>Exceptions to Regular Hours</strong> <em>(revised January 23rd, 2020)</em>
+        </td>
+      </tr>
+      <!-- Presidents' Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Presidents' Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder" style="font-weight:400;">
+          <span class="tableDaysText">
+            Sun - Mon<span class="gap"></span>
+            <span class="breakHere">Feb 16-17</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextAud">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Presidents' Day End -->
+      <!-- Spring Break Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Spring Break</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Mon - Thu<span class="gap"></span>
+            <span class="breakHere">March 23-26</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">7:30am - 6:00pm</span>
+        </td>
+      </tr>
+      <!-- Spring Break End -->
+      <!-- Cesar Chavez Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Cesar Chavez Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Friday<span class="gap"></span>
+            <span class="breakHere">March 27</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">10:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Cesar Chavez End -->
+      <!-- Triton Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Triton Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">April 11</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">8:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Triton Day End -->
+      <!-- Easter Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Easter Sunday</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">April 12</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Easter End -->
+      <!-- Memorial Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Memorial Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sun - Mon<span class="gap"></span>
+            <span class="breakHere">May 24-25</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Memorial Day End -->
+      <!-- Commencement Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Commencement</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sat - Sun<span class="gap"></span>
+            <span class="breakHere">June 13-14</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursTextSun">10:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Commencement End -->
+    </tbody>
+  </table>
+  <!-- Sunshine Market Table End -->
+  <!-- Audrey's Cafe Table Start -->
+  <table id="audreysHours" class="GeneratedTable">
+    <colgroup>
+      <col id="hoursColumnAudreys" />
+      <col id="audreysHours" class="textColor" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="background-color: #BC400B;" class="headImage" colspan="4">
+          <img alt="Audrey's Cafe Logo"
+            src="https://ucsandiegobookstore.com/Images/Logos/AudreysLogo.png" />
+          <h2 class="mobileText">Audrey's Café</h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="regularHours">
+        <td colspan="4">
+          <strong>Regular Hours</strong> <em>(September - June)</em>
+        </td>
+      </tr>
+      <tr>
+        <th class="padTop thBorder">
+          <span class="tableDaysText">Monday - Thursday</span>
+        </th>
+        <td class="centerAlign padTop tdBorder">
+          <span class="tableHoursTextAud">8:00am - 11:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="thBorder">
+          <span class="tableDaysText">Friday</span>
+        </th>
+        <td class="centerAlign tdBorder">
+          <span class="tableHoursTextAud">8:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="thBorder">
+          <span class="tableDaysText">Saturday</span>
+        </th>
+        <td class="centerAlign tdBorder">
+          <span class="tableHoursTextAud">11:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom">
+          <span class="tableDaysText">Sunday</span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursTextAud">11:00am - 9:00pm</span>
+        </td>
+      </tr>
+      <tr id="exceptionHours">
+        <td colspan="4">
+          <strong>Exceptions to Regular Hours</strong> <em>(revised January 23rd, 2020)</em>
+        </td>
+      </tr>
+      <!-- Presidents' Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Presidents' Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder" style="font-weight:400;">
+          <span class="tableDaysText">
+            Sun - Mon<span class="gap"></span>
+            <span class="breakHere">Feb 16-17</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextAud">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Presidents' Day End -->
+      <!-- Week 10 Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Week 10</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">March 8</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextSun">11:00am - 11:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Mon - Sat<span class="gap"></span>
+            <span class="breakHere">March 9-14</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">8:00am - Midnight</span>
+        </td>
+      </tr>
+      <!-- Week 10 End -->
+      <!-- Finals Week Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Finals Week</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sun - Thu<span class="gap"></span>
+            <span class="breakHere">March 15-19</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextSun">8:00am - Midnight</span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Friday<span class="gap"></span>
+            <span class="breakHere">March 20</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextSun">8:00am - 6:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">March 21</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">11:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Finals Week End -->
+      <!-- Spring Break Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Spring Break</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">March 22</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextAud">CLOSED</span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Mon - Wed<span class="gap"></span>
+            <span class="breakHere">March 23-25</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextAud">8:00am - 6:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Thursday<span class="gap"></span>
+            <span class="breakHere">March 26</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextAud">8:00am - 4:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">March 28</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextAud">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Spring Break End -->
+      <!-- Cesar Chavez Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Cesar Chavez Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Friday<span class="gap"></span>
+            <span class="breakHere">March 27</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextAud">10:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <!-- Cesar Chavez End -->
+      <!-- Easter Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Easter Sunday</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">April 12</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextAud">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Easter End -->
+      <!-- Shortened Hours Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Shortened Hours</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Saturday<span class="gap"></span>
+            <span class="breakHere">April 25</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextAud">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Shortened Hours End -->
+      <!-- Memorial Day Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Memorial Day</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">May 24</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextAud">11:00am - 5:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Monday<span class="gap"></span>
+            <span class="breakHere">May 25</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextAud">11:00am - 11:00pm</span>
+        </td>
+      </tr>
+      <!-- Memorial Day End -->
+      <!-- Week 10 Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Week 10</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sunday<span class="gap"></span>
+            <span class="breakHere">May 31</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextSun">11:00am - 11:00pm</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Mon - Sat<span class="gap"></span>
+            <span class="breakHere">June 1-6</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">8:00am - Midnight</span>
+        </td>
+      </tr>
+      <!-- Week 10 End -->
+      <!-- Finals Week Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Finals Week</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sun - Thu<span class="gap"></span>
+            <span class="breakHere">June 7-11</span>
+          </span>
+        </th>
+        <td class="centerAlign">
+          <span class="tableHoursTextSun">8:00am - Midnight</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom thBorder">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Friday<span class="gap"></span>
+            <span class="breakHere">June 12</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom tdBorder">
+          <span class="tableHoursTextSun">8:00am - 6:00pm</span>
+        </td>
+      </tr>
+      <!-- Finals Week End -->
+      <!-- Commencement Start -->
+      <tr>
+        <th class="padTop">
+          <span class="tableDaysText">
+            <strong>Commencement</strong>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursText"></span>
+        </td>
+      </tr>
+      <tr>
+        <th class="padBottom">
+          <span class="tableDaysText" style="font-weight: 400;">
+            Sat - Sun<span class="gap"></span>
+            <span class="breakHere">June 13-14</span>
+          </span>
+        </th>
+        <td class="centerAlign padBottom">
+          <span class="tableHoursTextAud">CLOSED</span>
+        </td>
+      </tr>
+      <!-- Commencement End -->
+    </tbody>
+  </table>
+  <!-- Audrey's Cafe Table End -->
+</div>
+<div class="col-xs-10" style="background-color: white;">&nbsp;</div>
+<a href="https://www.amazon.com/ulp?zipcode=92093">
+  <img alt="Amazon at UC San Diego. Regular Hours: 9am to 9pm 7 days a week." style="width:100%;"
+    title="Click for details" src="/Images/Hours/AmazonHoursLogo.jpg"
+    class="center-block img-responsive" /></a>
+<div class="col-xs-1">&nbsp;</div>
+<div class="col-sm-12">
+  <hr />
+  <div style="width: 100%; height:500px; margin-right: auto;">
+    <iframe style="border:0;"
+      src="https://www.google.com/maps/embed/v1/place?q=uc%20san%20diego%20bookstore&amp;key=AIzaSyBhQRXkOppNsSDbezGA--ngRp0w3TEPSTI"
+      width="100%" height="100%" frameborder="0"></iframe>&nbsp;</div>
+  <br />
+  <div
+    style="padding:10px;float:left;margin: auto; border: 3px solid white;background-color: rgba(0,198,215,0.25);width:100%;">
+    <div class="leftblock"><strong
+        style="color: inherit; font-family: inherit; font-size: 18px;">UCSD
+        Bookstore</strong></div>
+    <div><strong><span class="epson" style="margin-left: 10px;">&nbsp;</span>General Driving
+        Directions to
+        Gilman Parking Structure:</strong></div>
+    <div><strong>&nbsp;</strong>
+      <div style="margin: 0 auto; display:table;vertical-align: top; clear:both;">
+        <ul class="textbookULs"
+          style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+          <li class="noshow"><strong>&nbsp;</strong></li>
+          <li class="noshow"><strong>From North:
+            </strong></li>
+          <li class="noshow"><strong>&nbsp;</strong></li>
+          <li>Take I-5 south.</li>
+          <li>Take the La Jolla Village Drive exit.</li>
+          <li>Turn right onto La Jolla Village Dr.</li>
+          <li>Turn right onto Villa La Jolla Dr.</li>
+          <li>At the end of Villa La Jolla Dr. enter Gilman
+            Parking Structure.</li>
+        </ul>
+        <ul class="textbookULs"
+          style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+          <li class="noshow">&nbsp;</li>
+          <li class="noshow"><strong>From East:</strong></li>
+          <li class="noshow">&nbsp;</li>
+          <li>Take I-8 west.</li>
+          <li>Merge onto I-5 north.</li>
+          <li>Take the La Jolla Village Drive exit.</li>
+          <li>Turn left onto La Jolla Village Drive.</li>
+          <li>Turn right onto Villa La Jolla Dr.</li>
+          <li>At the end of Villa La Jolla Dr. enter Gilman
+            Parking Structure.</li>
+        </ul>
+        <ul class="textbookULs"
+          style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+          <li class="noshow"><strong>&nbsp;</strong></li>
+          <li class="noshow"><strong>From South:
+            </strong></li>
+          <li class="noshow"><strong>&nbsp;</strong></li>
+          <li>Take I-5 north.</li>
+          <li>Take the La Jolla Village Drive exit.</li>
+          <li>Turn left onto La Jolla Village Drive.</li>
+          <li>Turn right onto Villa La Jolla Dr.</li>
+          <li>At the end of Villa La Jolla Dr. enter Gilman
+            Parking Structure.</li>
+        </ul>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <strong><a href="http://blink.ucsd.edu/facilities/transportation/permits/index.html"
+        target="_blank">UCSD
+        Parking Permits</a></strong>
+    <br />
+    <br />
+    <strong><a href="https://transportation.ucsd.edu/parking/visitor/index.html">Parking
+        and Transportation For
+        Visitors</a></strong>
+    <br />
+    Find options to park on UC San Diego campus.
+  </div>
+  <br />
+  <p>&nbsp;</p>
+  <div
+    style="padding:10px;float:left;margin: auto; border: 3px solid white;background-color: rgba(252,137,0,0.25);width:100%;">
+    <div class="leftblock"><strong
+        style="color: inherit; font-family: inherit; font-size: 18px;">Amazon@UCSanDiego</strong>
+    </div>
+    <div><strong><span class="epson" style="margin-left: 10px;">&nbsp;</span></strong></div>
+    <div><strong><span class="epson" style="margin-left: 10px;">&nbsp;</span>Directions</strong>
+    </div>
+    <div>
+      <div style="margin: 0 auto; display:table;vertical-align: top; clear:both;">
+        <ul style="float:left;margin: auto; padding-right:20px; border: 3px solid transparent;">
+          <li class="noshow"><strong>&nbsp;</strong></li>
+          <li>Amazon@UCSanDiego is located on the first floor,
+            right inside the UC San Diego Bookstore. If
+            you enter 'UCSD Bookstore' in any maps app - it will
+            lead you directly to the Amazon site.
+          </li>
+          <li>To get here, enter through the Bookstore entrance on
+            Lyman Lane. Or go downstairs by the
+            fountain off Library Walk into Price Center Plaza.
+            Or go up the
+            stairs to the Price Center West entrance, through
+            the building, left at door, and then down
+            the stairs. </li>
+          <li>During the week, there is paid parking available,
+            BUT parking is FREE on Sat and Sun
+            anywhere on campus. The closest parking structure is
+            Gilman Parking Structure. See
+            directions above.</li>
+          <li>There is a 20 min loading zone parking available on
+            Russel Lane, off the intersection of
+            Myers Dr and Gilman Dr</li>
+        </ul>
+        <!--<a href="http://ucsd.amazon.com/"><img alt="" src="/Images/AmazonDirections.png" style="text-align:center;" class="left-block img-responsive" /></a>-->
+      </div>
+    </div>
+  </div>
+</div>
