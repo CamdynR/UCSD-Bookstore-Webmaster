@@ -1,0 +1,177 @@
+<style>
+  a {
+    color: #3366BB;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #3366BB;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #3366BB;
+  }
+
+  h1 {
+    color: #0070c0;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  header {
+    align-items: center;
+    display: grid;
+    grid-template-areas: 'banner';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    height: auto;
+    width: 100%;
+  }
+
+  header img {
+    max-width: 900px;
+    width: 100%;
+  }
+
+  #brochureThumbnail {
+    max-width: 450px;
+    width: 100%;
+  }
+
+  #capAndGown {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  #capAndGown,
+  #dontForget,
+  #titleLocation,
+  #downloadBrochure {
+    float: left;
+    grid-area: text;
+    justify-self: start;
+    max-width: 550px;
+    width: 100%;
+  }
+
+  #contentWrapper {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  #dontForget {
+    margin-bottom: 25px;
+  }
+
+  #dontForget h2 {
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  #downloadBrochure,
+  #titleLocation p {
+    font-weight: bold;
+  }
+
+  #eventMap {
+    float: right;
+    margin-top: 25px;
+    max-width: 350px;
+    position: relative;
+  }
+
+  #eventMapText {
+    display: none;
+  }
+
+  #titleLocation h1{
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  #titleLocation p {
+    margin-bottom: 2px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #capAndGown {
+      text-align: justify !important;
+    }
+
+    #capAndGown,
+    #dontForget,
+    #titleLocation,
+    #downloadBrochure {
+      max-width: 900px;
+    }
+
+    #eventMap {
+      display: none;
+    }
+
+    #eventMapText {
+      display: block;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    header img {
+      content:url("Images/Graduation/grad2020/GradFairNite2020BannerHeader_Mobile.png");
+    }
+  }
+</style>
+
+<header>
+  <img alt="Grad Fair Nite 2020" src="Images/Graduation/grad2020/GradFairNite2020BannerHeader.png">
+</header>
+
+<main>
+  <div id="contentWrapper">
+    <a href="Images/Graduation/grad2020/GradFairNite2020Map_new.png" target="_blank" title="View Event Map">
+      <img alt="Grad Fair Event Map of Town Square Plaza" 
+       src="Images/Graduation/grad2020/GradFairNite2020Map.png" id="eventMap">
+    </a>
+
+    <p id="eventMapText">View Event Map <a href="Images/Graduation/grad2020/GradFairNite2020Map_new.png">Here</a></p>
+
+    <div id="titleLocation">
+      <h1>UC San Diego Grad Fair</h1>
+      <p>May 12 - 14 · 10am - 6pm</p>
+      <p>Grad Tent in Town Square, just outside the Bookstore</p>
+    </div>
+    
+    <div id="capAndGown">
+      <p>Now’s the time to purchase and pick up your cap and gown, or bundle and save with a Triton Grad Pack.
+        Make sure you purchase your Grad Pack before the end of Grad Fair to take advantage of special
+        discounted pricing. On May 15, they all go back to full price. &nbsp;See bundled Grad Pack options 
+        <a href="https://ucsandiegobookstore.com/t-gradpacks.aspx">here</a>.
+      </p>
+    </div>
+
+    <div id="dontForget">
+      <h2>Don't forget to:</h2>
+      <ul>
+        <li>Pick up your cap and gown</li>
+        <li>Talk to Jostens reps about diploma frames, class rings, and graduation announcements</li>
+        <li>Take your senior portrait</li>
+        <li>Meet with UC San Diego Alumni and Career Services</li>
+      </ul>
+    </div>
+
+    <p id="downloadBrochure">Download our Grad Central Brochure: <br/>
+      <a href="Images/Graduation/grad2020/GradCentralBrochure2020.pdf" target="_blank" title="View Brochure">
+        <img alt="Graduation 2020 Brochure Thumbnail" 
+        src="Images/Graduation/grad2020/BrochureThumbnail.png" id="brochureThumbnail">
+      </a>
+    </p>
+  </div>
+</main>
